@@ -6,8 +6,7 @@ $(document).ready(function(){
             $slider = $sliderWrapper.find('.slider-list');
 
         $slider.slick({
-            //slide: '.slider-item',
-            dots: false,
+            dots: true,
             arrows: true,
             prevArrow: '<div class="slider-nav nav-left"></div>',
             nextArrow: '<div class="slider-nav nav-right"></div>',
