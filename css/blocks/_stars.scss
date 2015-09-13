@@ -4,11 +4,11 @@
 
   .star-item {
     display: inline-block;
-    @extend .b-icon.icon-img;
-    @extend .b-icon.icon-img.icon-star-active;
+    @extend .b-icon;
+    @extend .b-icon.icon-star-active;
 
     &.item-inactive {
-      @extend .b-icon.icon-img.icon-star-inactive;
+      @extend .b-icon.icon-star-inactive;
     }
   }
 }

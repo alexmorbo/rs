@@ -45,7 +45,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src('./js/main.js')
+    return gulp.src('./js/**/*.js')
         .pipe(gulp.dest('./js/'))
         .pipe($.uglifyjs())
         .pipe($.rename({
@@ -59,7 +59,8 @@ gulp.task('watch', function() {
     gulp.watch('css/**/*.{scss,sass}', ['sass']);
     gulp.watch('img/icons/**/*', ['sprite']);
     gulp.watch(['img/**/*', '!img/icons/**/*', '!img/sprite.png'], ['imagemin']);
+    gulp.watch(['js/**/*', '!js/**/*.min.js'], ['js']);
 });
 
 // Creating a default task
-gulp.task('default', ['watch', 'sass', 'sprite']);
+gulp.task('default', ['watch', 'sass', 'js', 'sprite']);

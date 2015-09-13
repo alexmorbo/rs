@@ -1,0 +1,24 @@
+.b-social {
+  display: inline-block;
+  vertical-align: middle;
+
+  .social-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 9px;
+  }
+
+  .social-link {
+    display: block;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+  }
+
+  .social-icon {
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,76 @@
+.b-category {
+  &.category-preview {
+    padding-top: 19px;
+    background: #2f343b;
+
+    .category-heading {
+      background: none;
+      color: #ffffff;
+      margin-bottom: 26px;
+    }
+
+    .category-content {
+      @include margin(null -1*gutter() 33px);
+    }
+
+    .category-item {
+      text-align: center;
+      @include span(full);
+      margin-bottom: 2*gutter();
+
+      &-content {
+        display: block;
+        background: #ffbb03;
+        min-height: 142px;
+        text-decoration: none;
+      }
+
+      &-image {
+        display: block;
+
+        .icon-category-hookah {
+          margin: 13px 0 3px;
+        }
+
+        .icon-category-tobacco {
+          margin: 27px 0 12px;
+        }
+
+        .icon-category-accessories {
+          margin: 15px 0 7px;
+        }
+
+        .icon-category-charcoal {
+          margin: 13px 0 8px;
+        }
+
+        .icon-category-nonicotine {
+          margin: 26px 0 14px;
+        }
+
+        .icon-category-otivana {
+          margin-top: 39px;
+        }
+      }
+
+      &-heading {
+        font-size: 16px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      @media (min-width: 1070px) {
+        @include gallery(1 of 6);
+      }
+
+      @media (max-width: 1069px) and (min-width: 800px) {
+        @include gallery(1 of 3);
+      }
+
+      @media (max-width: 799px) and (min-width: 480px) {
+        @include gallery(1 of 2);
+      }
+    }
+  }
+}

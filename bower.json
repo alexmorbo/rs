@@ -15,7 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.6",
-    "bourbon": "~4.2.4"
+    "bourbon": "~4.2.4",
+    "jquery": "~2.1.4",
+    "slick-carousel": "~1.5.8",
+    "susy": "~2.2.6"
   }
 }

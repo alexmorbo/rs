@@ -1,0 +1,50 @@
+.b-menu {
+  &.menu-footer {
+    background: #ebebeb;
+    font-size: 14px;
+    line-height: 18px;
+
+    .menu-wrapper {
+      @include padding(20px 0);
+    }
+
+    .menu-heading {
+      font-family: $ubuntu;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+
+    .menu-list {
+      margin-bottom: 21px;
+    }
+
+    .menu-link {
+      font-weight: 100;
+
+      &.link-subitem {
+        text-decoration: none;
+        &:before {
+          content: '| ';
+        }
+      }
+    }
+
+    .menu-col {
+      @include span(1 of 4);
+      margin-bottom: -21px;
+
+      @media (max-width: 860px) {
+        @include span(1 of 2);
+      }
+
+      @media (max-width: 480px) {
+        @include span(full);
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-bottom: -21px;
+        }
+      }
+    }
+  }
+}

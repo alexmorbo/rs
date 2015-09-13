@@ -1,3 +1,37 @@
 .b-footer {
+  background: #2f343b;
+  font-size: 14px;
+  color: #fff;
 
+  .footer-wrapper {
+    @include padding(24px 0);
+  }
+
+  .footer-col {
+    @include span(6 of 12);
+
+    @media (max-width: 480px) {
+      @include span(full);
+    }
+  }
+
+  .footer-social {
+    text-align: right;
+  }
+
+  .footer-copyright {
+    @include padding(12px null);
+    vertical-align: middle;
+  }
+
+  @media (max-width: 480px) {
+
+    .footer-col {
+      text-align: center;
+    }
+
+    .footer-copyright {
+      @include padding(0 null 15px);
+    }
+  }
 }
