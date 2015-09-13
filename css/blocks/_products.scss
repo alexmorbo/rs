@@ -1,0 +1,34 @@
+.b-products {
+
+  .products-list {
+    @include clearfix;
+    @include margin(null -1*gutter());
+  }
+
+  .product-item {
+    @include span(full);
+    margin-bottom: 49px;
+
+    @media (min-width: 1070px) {
+      @include gallery(1);
+    }
+
+    @media (max-width: 1069px) and (min-width: 890px) {
+      @include with-layout(4) {
+        @include gallery(1);
+      }
+    }
+
+    @media (max-width: 889px) and (min-width: 660px) {
+      @include with-layout(3) {
+        @include gallery(1);
+      }
+    }
+
+    @media (max-width: 659px) and (min-width: 480px) {
+      @include with-layout(2) {
+        @include gallery(1);
+      }
+    }
+  }
+}

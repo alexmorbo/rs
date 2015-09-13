@@ -5,11 +5,9 @@ var merge = require('merge-stream');
 
 gulp.task('sass', function() {
     gulp.src('./css/style.scss')
-        .pipe($.sourcemaps.init())
         .pipe($.sass({
             errLogToConsole: true
         }))
-        .pipe($.sourcemaps.write())
         .pipe(gulp.dest('./css/'))
         .pipe($.minifyCss())
         .pipe($.rename({

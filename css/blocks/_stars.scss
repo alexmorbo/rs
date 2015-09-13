@@ -1,0 +1,14 @@
+.b-stars {
+  display: inline-block;
+  height: 14px;
+
+  .star-item {
+    display: inline-block;
+    @extend .b-icon.icon-img;
+    @extend .b-icon.icon-img.icon-star-active;
+
+    &.item-inactive {
+      @extend .b-icon.icon-img.icon-star-inactive;
+    }
+  }
+}

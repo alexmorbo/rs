@@ -1,10 +1,12 @@
 
 /* global susy settings */
+$gutters: 18/218;
 $susy: (
-  columns: 12,
-  gutters: 30/70,
-  gutter-position: split,
-  container: 1200px,
+  columns: 5,
+  column-width: 218px,
+  gutters: $gutters,
+  gutter-position: inside-static,
+  container: 1070px,
   global-box-sizing: border-box,
   output: float
 );
