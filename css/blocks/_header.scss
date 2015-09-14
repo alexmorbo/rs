@@ -1,3 +1,226 @@
 .b-header {
+  &.header-top {
+    background: #2f343b;
 
+    .header-menu {
+      float: left;
+      width: 100%;
+      margin-right: -217px;
+      padding-right: 217px;
+    }
+
+    .header-login {
+      float: right;
+      width: 217px;
+      background: #23272c;
+      height: 36px;
+      text-align: center;
+
+      &-action {
+        display: inline-block;
+        font-family: $ubuntu;
+        font-size: 11px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 11px;
+        text-decoration: none;
+
+        &:before {
+          content: '';
+          @extend .b-icon;
+          @extend .b-icon.icon-man;
+
+          position: relative;
+          left: -11px;
+          top: 1px;
+        }
+      }
+    }
+
+    .header-call {
+      display: none;
+      float: right;
+      width: 178px;
+    }
+
+    @media (max-width: 760px) {
+      .header-menu {
+        display: none;
+      }
+
+      .header-call {
+        display: block;
+      }
+
+      .header-login {
+        width: 181px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .header-wrapper {
+        @include padding(null 0);
+      }
+
+      .header-call,
+      .header-login {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .header-call {
+        &-content {
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      .header-login {
+        &-action {
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  &.header-with-logo {
+    .header-wrapper {
+      //height: 92px;
+    }
+
+    .header-logo {
+      float: left;
+      width: 219px;
+      height: 92px;
+
+      &-link {
+        display: inline-block;
+        margin-top: 9px;
+      }
+    }
+
+    .header-search {
+      float: left;
+      width: 100%;
+      margin-left: -219px;
+      padding-left: 219px;
+      height: 100%;
+      margin-right: -380px;
+      padding-right: 400px;
+
+      &-switcher {
+        display: none;
+        float: right;
+        margin-top: 27px;
+        margin-right: 20px;
+
+        .switcher-button {
+          width: 35px;
+          height: 35px;
+
+          .button-icon {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &-form {
+        margin-top: 27px;
+      }
+    }
+
+    .header-phone {
+      float: right;
+      width: 210px;
+      height: 100%;
+      margin-right: 20px;
+
+      &-link {
+        display: inline-block;
+        margin-top: 34px;
+        text-decoration: none;
+        margin-right: -20px;
+
+        &:before {
+          content: '';
+          @extend .b-icon;
+          @extend .b-icon.icon-phone;
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
+      &-text {
+        vertical-align: middle;
+        font-family: $ubuntu;
+        font-weight: 700;
+        font-size: 23px;
+      }
+    }
+
+    .header-call {
+      float: right;
+      width: 140px;
+      height: 100%;
+
+      &-content {
+        margin-top: 27px;
+      }
+    }
+
+    .header-menu-switcher {
+      display: none;
+      float: right;
+      margin-top: 33px;
+      margin-right: 9px;
+    }
+
+    @media (max-width: 890px) {
+      .header-logo {
+        width: auto;
+      }
+
+      .header-search {
+        display: none;
+
+        &-switcher {
+          display: block;
+        }
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-wrapper {
+        margin: 16px 0 18px;
+      }
+
+      .header-call {
+        display: none;
+      }
+
+      .header-menu-switcher {
+        display: block;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .header-phone {
+        width: auto;
+
+        &-link {
+          margin-right: 0;
+
+          &:before {
+            margin-right: 0;
+          }
+        }
+
+        &-text {
+          display: none;
+        }
+      }
+    }
+  }
 }

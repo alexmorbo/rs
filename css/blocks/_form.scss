@@ -1,0 +1,31 @@
+.b-form {
+
+  .form-input {
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #bfbfbf;
+  }
+
+  &.form-header-search {
+    .form-input {
+      width: 100%;
+
+      &-holder {
+        float: left;
+        width: 100%;
+        margin-right: -50px;
+        padding-right: 50px;
+      }
+    }
+
+    .form-button {
+      float: right;
+      width: 35px;
+      height: 35px;
+
+      .button-icon {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,4 +1,67 @@
 .b-menu {
+  &.menu-header {
+    font-family: $ubuntu;
+    font-size: 12px;
+
+    .menu-list {
+      display: table;
+      width: 100%;
+      max-width: 700px;
+      height: 36px;
+      float: right;
+    }
+
+    .menu-item {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .menu-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &.menu-category {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 7px 0;
+    margin-bottom: 35px;
+
+    .menu-list {
+      display: table;
+      width: 100%;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    .menu-item {
+      display: table-cell;
+      font-family: $ubuntuCondensed;
+      font-size: 18px;
+      color: #2f343b;
+      text-transform: uppercase;
+      text-align: center;
+      min-width: 100px;
+      padding: 5px 0 4px;
+
+      + .menu-item {
+        border-left: 1px solid #ebebeb;
+      }
+    }
+
+    .menu-link {
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      display: none;
+    }
+  }
+
   &.menu-footer {
     background: #ebebeb;
     font-size: 14px;

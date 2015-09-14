@@ -45,8 +45,7 @@ gulp.task('imagemin', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src('./js/**/*.js')
-        .pipe(gulp.dest('./js/'))
+    return gulp.src(['./js/**/*', '!js/*.min.js'])
         .pipe($.uglifyjs())
         .pipe($.rename({
             suffix: '.min'
@@ -54,13 +53,18 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./js/'));
 });
 
+gulp.task('serve', $.serve({
+    root: './',
+    port: 3000
+}));
+
 // Watch scss folder for changes
 gulp.task('watch', function() {
     gulp.watch('css/**/*.{scss,sass}', ['sass']);
     gulp.watch('img/icons/**/*', ['sprite']);
     gulp.watch(['img/**/*', '!img/icons/**/*', '!img/sprite.png'], ['imagemin']);
-    gulp.watch(['js/**/*', '!js/**/*.min.js'], ['js']);
+    gulp.watch(['js/**/*', '!*.min.js'], ['js']);
 });
 
 // Creating a default task
-gulp.task('default', ['watch', 'sass', 'js', 'sprite']);
+gulp.task('default', ['watch', 'sass', 'js', 'sprite', 'serve']);

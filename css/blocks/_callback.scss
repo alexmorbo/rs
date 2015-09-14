@@ -1,0 +1,30 @@
+.b-callback {
+  height: 36px;
+  display: block;
+  font-family: $ubuntu;
+  font-weight: 100;
+  color: #2f343b;
+  text-decoration: none;
+  padding-top: 8px;
+  text-align: center;
+
+  .callback-text {
+    text-decoration: underline;
+  }
+
+  &:before {
+    content: '';
+    @extend .b-icon;
+    @extend .b-icon.icon-phone-call;
+    vertical-align: middle;
+    margin-right: 7px;
+  }
+
+  &.callback-yellow {
+    background-color: #ffbb03;
+
+    &:before {
+      @extend .b-icon.icon-phone-call-black;
+    }
+  }
+}

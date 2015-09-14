@@ -5,6 +5,20 @@
   padding: 0 0 10px 0;
   text-align: center;
 
+  .card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .card-link-upper {
+    position: relative;
+    z-index: 20;
+  }
+
   .card-motivator {
     position: absolute;
     right: 9px;
@@ -19,7 +33,6 @@
 
   .card-view {
     position: relative;
-    z-index: 1;
     padding: 23px 0 10px;
   }
 

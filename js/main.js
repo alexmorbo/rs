@@ -1,16 +1,20 @@
 $(document).ready(function(){
 
-    // rproducts slider
+    // products slider
     (function() {
         var $sliderWrapper = $('.b-slider.slider-products'),
             $slider = $sliderWrapper.find('.slider-list');
 
         $slider.slick({
             dots: true,
+            customPaging: function(slider, i) {
+                return '<div class="slider-dot"></div>';
+            },
             arrows: true,
             prevArrow: '<div class="slider-nav nav-left"></div>',
             nextArrow: '<div class="slider-nav nav-right"></div>',
             slidesToShow: 5,
+            slidesToScroll: 5,
             swipeToSlid: true,
             responsive: [
                 {
@@ -41,9 +45,6 @@ $(document).ready(function(){
                         slidesToScroll: 1
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         });
     })();
