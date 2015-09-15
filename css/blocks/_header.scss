@@ -89,9 +89,13 @@
   &.header-with-logo {
     .header-wrapper {
       //height: 92px;
+      position: relative;
+      z-index: 50;
     }
 
     .header-logo {
+      position: relative;
+      z-index: 1;
       float: left;
       width: 219px;
       height: 92px;
@@ -128,7 +132,37 @@
       }
 
       &-form {
+        @include clearfix;
         margin-top: 27px;
+      }
+
+      &-hidden {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 1;
+
+        &.is-open {
+          display: block;
+        }
+
+        .header-search-form {
+          border: 1px solid #cdcec9;
+          padding: 9px;
+          margin: 0;
+        }
+
+        .form-input-holder {
+          margin-right: -55px;
+          padding-right: 65px;
+        }
+
+        .form-button {
+          width: 55px;
+        }
       }
     }
 

@@ -98,4 +98,16 @@ $(document).ready(function(){
 
     })();
 
+    //hidden search
+    (function() {
+
+        var $searchButton = $('.js-search-open'),
+            $searchContent = $('.js-search-content'),
+            openClass = 'is-open';
+
+        $searchButton.on('click', function(e) {
+            $searchContent.toggleClass(openClass);
+        });
+    })();
+
 });
