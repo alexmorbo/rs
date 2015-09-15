@@ -1,0 +1,51 @@
+.b-offcanvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .offcanvas-menu {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    bottom: 0;
+    background: #000;
+  }
+
+  .offcanvas-content {
+    position: relative;
+    width: 100%;
+    @include transform(translateX(0));
+    @include transition(0.3s transform ease);
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: 0;
+      @include transition(none);
+      z-index: -1000;
+    }
+  }
+
+  @media (max-width: 760px) {
+    &.is-open {
+      .offcanvas-content {
+        @include transform(translateX(300px));
+
+        &:before {
+          display: block;
+          opacity: 0.3;
+          z-index: 1000;
+          @include transition(.3s opacity ease);
+
+        }
+      }
+    }
+  }
+}

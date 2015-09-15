@@ -590,6 +590,24 @@ a {
   @media (max-width: 760px) {
     .b-menu.menu-category {
       display: none; } }
+.b-menu.menu-offcanvas {
+  padding: 25px; }
+  .b-menu.menu-offcanvas .menu-list {
+    margin-bottom: 20px; }
+  .b-menu.menu-offcanvas .menu-item {
+    display: block;
+    margin-bottom: 15px; }
+    .b-menu.menu-offcanvas .menu-item.item-heading {
+      margin-bottom: 24px; }
+      .b-menu.menu-offcanvas .menu-item.item-heading .menu-link {
+        font-size: 19px;
+        color: #fff;
+        text-decoration: underline; }
+  .b-menu.menu-offcanvas .menu-link {
+    font-size: 15px;
+    color: #bebebe;
+    text-transform: uppercase;
+    text-decoration: none; }
 .b-menu.menu-footer {
   background: #ebebeb;
   font-size: 14px;
@@ -1103,7 +1121,8 @@ a {
 
 .b-social {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  margin: 0 -9px; }
   .b-social .social-item {
     display: inline-block;
     vertical-align: middle;
@@ -1258,6 +1277,57 @@ a {
     right: 0;
     top: -15px; }
 
+.b-offcanvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .b-offcanvas .offcanvas-menu {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    bottom: 0;
+    background: #000; }
+  .b-offcanvas .offcanvas-content {
+    position: relative;
+    width: 100%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: 0.3s transform ease;
+    -moz-transition: 0.3s transform ease;
+    transition: 0.3s transform ease; }
+    .b-offcanvas .offcanvas-content:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: 0;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+      z-index: -1000; }
+  @media (max-width: 760px) {
+    .b-offcanvas.is-open .offcanvas-content {
+      -webkit-transform: translateX(300px);
+      -moz-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+      -o-transform: translateX(300px);
+      transform: translateX(300px); }
+      .b-offcanvas.is-open .offcanvas-content:before {
+        display: block;
+        opacity: 0.3;
+        z-index: 1000;
+        -webkit-transition: .3s opacity ease;
+        -moz-transition: .3s opacity ease;
+        transition: .3s opacity ease; } }
+
 .js-login-open {
   cursor: pointer; }
 .js-login-panel {
@@ -1276,3 +1346,6 @@ a {
     visibility: visible;
     height: auto;
     overflow: visible; }
+
+.js-offcanvas-button {
+  cursor: pointer; }
