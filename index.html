@@ -60,13 +60,175 @@
                 </ul>
             </div>
         </div>
-        <div class="header-login">
+        <div class="header-login js-login-open">
             <a href="#" class="header-login-action">Войти/Регистрация</a>
         </div>
         <div class="header-call">
             <a href="#" class="header-call-content b-callback callback-yellow">
                 <span class="callback-text">Заказать звонок</span>
             </a>
+        </div>
+    </div>
+</div>
+
+<div class="b-login js-login-panel">
+    <div class="login-holder">
+        <div class="login-wrapper b-wrapper">
+            <div class="login-action-wrapper">
+                <a class="login-close js-login-open" href="#"><i class="b-icon icon-login-close"></i></a>
+                <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-input" href="#">Войдите</a> / <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-register" href="#">зарегистрируйтесь</a>
+            </div>
+            <div class="login-form">
+                <form action="#" class="b-form form-login login-form-input js-login-form" data-target-group="login-form">
+                    <div class="form-row">
+
+                        <div class="form-cell-half">
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <label class="form-label">
+                                        <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                    </label>
+                                </div>
+                                <div class="form-cell-half">
+                                    <label class="form-label">
+                                        <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                        <a class="form-label-info js-login-target-button" data-target=".b-form.login-form-lost" data-target-button="[data-target='.b-form.login-form-input']" href="#">Забыли пароль?</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <button class="form-button b-button">Войти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-cell-half form-social">
+                            <div class="b-social social-login">
+                                <ul class="social-list">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-vk"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-fb"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-ok"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-gp"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-tw"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <span class="form-social-label form-label-info">
+                            Войти через социальную сеть
+                        </span>
+                        </div>
+                    </div>
+                </form>
+                <form action="#" class="b-form form-login login-form-register js-login-form" data-target-group="login-form">
+                    <div class="form-row">
+                        <div class="form-cell-half">
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label class="form-label">
+                                        <input class="form-input" type="text" name="phone" placeholder="Введите имя">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <label class="form-label">
+                                        <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                    </label>
+                                </div>
+                                <div class="form-cell-half">
+                                    <label class="form-label">
+                                        <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <button class="form-button b-button">Зарегистрироваться</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-cell-half form-social">
+                            <div class="b-social social-login">
+                                <ul class="social-list">
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-vk"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-fb"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-ok"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-gp"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="#" class="social-link">
+                                            <i class="b-icon icon-social-color-tw"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        <span class="form-social-label form-label-info">
+                            Зарегистрироваться через социальную сеть
+                        </span>
+                        </div>
+                    </div>
+                </form>
+                <form action="#" class="b-form form-login login-form-lost js-login-form" data-target-group="login-form">
+                    <div class="form-row">
+                        <div class="form-cell-half">
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label class="form-label">
+                                        <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                        <span class="form-label-info">или</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label class="form-label">
+                                        <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <button class="form-button b-button">Напомнить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

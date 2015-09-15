@@ -63,4 +63,39 @@ $(document).ready(function(){
         });
     })();
 
+    // login forms
+    (function() {
+
+        var openClass = 'is-open',
+            targetActiveClass = 'login-link-active';
+
+        $('.js-login-open').on('click', function(e) {
+            e.preventDefault();
+            $('.js-login-panel').toggleClass(openClass);
+        });
+
+        var $loginTargetButtons = $('.js-login-target-button');
+
+        $loginTargetButtons.on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this),
+                $thisTarget = $($this.data('target')),
+                $thisTargetButton = $($this.data('target-button')),
+                $thisTargetGroup = $("[data-target-group='" + $thisTarget.data('target-group') + "']");
+
+            if (!$thisTargetButton.length) {
+                $thisTargetButton = $this;
+            }
+
+            $loginTargetButtons.removeClass(targetActiveClass);
+            $thisTargetButton.addClass(targetActiveClass);
+            $thisTargetGroup.removeClass(openClass);
+            $thisTarget.addClass(openClass);
+        });
+
+        $loginTargetButtons.eq(0).trigger('click');
+
+    })();
+
 });

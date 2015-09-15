@@ -1,0 +1,26 @@
+.js-login {
+
+  @mixin jsHide {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+
+    &.is-open {
+      visibility: visible;
+      height: auto;
+      overflow: visible;
+    }
+  }
+
+  &-open {
+    cursor: pointer;
+  }
+
+  &-panel {
+    @include jsHide;
+  }
+
+  &-form {
+    @include jsHide;
+  }
+}

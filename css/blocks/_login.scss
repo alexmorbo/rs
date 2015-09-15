@@ -1,0 +1,46 @@
+.b-login {
+  position: relative;
+  z-index: 100;
+
+  .login-holder {
+    background: #23272c;
+    color: #6a6a6a;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .login-wrapper {
+    @include padding(46px null 20px);
+  }
+
+  .login-link{
+    color: #6a6a6a;
+    text-decoration: underline;
+
+    &-active {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .login-action {
+    &-wrapper {
+      position: relative;
+      display: block;
+      font-family: $ubuntuCondensed;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 38px;
+      padding-right: 30px;
+    }
+  }
+
+  .login-close {
+    position: absolute;
+    right: 0;
+    top: -15px;
+  }
+}
