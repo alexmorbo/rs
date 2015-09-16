@@ -70,6 +70,138 @@
       }
     }
 
+    .products-head {
+      @include clearfix;
+      font-size: 24px;
+      line-height: 1;
+
+      &-controls {
+        float: right;
+      }
+
+      &-name {
+        float: left;
+        margin-bottom: 0;
+        font-size: 24px;
+        color: #2f343b;
+
+        .name-quantity {
+          margin-left: 10px;
+          color: #ffbb03;
+        }
+      }
+
+      &-view ,
+      &-sort {
+        float: right;
+        font-family: $ubuntu;
+        font-size: 14px;
+        line-height: 24px;
+        vertical-align: middle;
+        font-weight: 100;
+        text-transform: none;
+      }
+
+      &-sort {
+        .sort-item {
+          display: inline-block;
+          padding: 1px 5px;
+          margin: -1px 0;
+          margin-left: 20px;
+          text-decoration: none;
+
+          &:after {
+            margin-left: 3px;
+          }
+
+          &-name {
+            text-decoration: underline;
+          }
+
+          &.item-selected {
+            background: #ffbb03;
+            color: #fff!important;
+          }
+
+          &.item-asc {
+            &:after {
+              content: '\2191';
+            }
+          }
+
+          &.item-desc {
+            &:after {
+              content: '\2193';
+            }
+          }
+        }
+      }
+
+      &-view {
+        margin-left: 50px;
+
+        .view-item {
+          margin-left: 16px;
+
+          &:before {
+            @extend .b-icon;
+            content: '';
+            position: relative;
+            top: 2px;
+          }
+
+          &.item-cards {
+            &:before {
+              @extend .b-icon.icon-catalog-cards;
+            }
+
+            &.item-active {
+              &:before {
+                @extend .b-icon.icon-catalog-cards-active;
+              }
+            }
+          }
+
+          &.item-list {
+            &:before {
+              @extend .b-icon.icon-catalog-list;
+            }
+
+            &.item-active {
+              &:before {
+                @extend .b-icon.icon-catalog-list-active;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        &-controls {
+          float: left;
+          width: 100%;
+        }
+
+        &-view,
+        &-sort {
+          margin-top: 10px;
+          float: left;
+        }
+
+        &-view {
+          margin-left: 0;
+          margin-right: 20px;
+        }
+
+        &-sort {
+          .sort-item {
+            margin-left: 0;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
     &.products-horizontal {
       .product-item {
         @include span(full);
