@@ -92,6 +92,35 @@
     }
   }
 
+  &.menu-products {
+    .menu-item {
+      margin-bottom: 22px;
+
+      &:before {
+        content: '- ';
+      }
+    }
+
+    .menu-link {
+      text-decoration: none;
+
+      &-text {
+        text-decoration: underline;
+      }
+
+      &-quantity {
+        margin-left: 7px;
+        color: #cfcec7;
+      }
+
+      &:hover {
+        .menu-link-text {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
   &.menu-footer {
     background: #ebebeb;
     font-size: 14px;

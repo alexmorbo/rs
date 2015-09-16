@@ -8,28 +8,6 @@
   .product-item {
     @include span(full);
     margin-bottom: 49px;
-
-    @media (min-width: 1070px) {
-      @include gallery(1);
-    }
-
-    @media (max-width: 1069px) and (min-width: 890px) {
-      @include with-layout(4) {
-        @include gallery(1);
-      }
-    }
-
-    @media (max-width: 889px) and (min-width: 660px) {
-      @include with-layout(3) {
-        @include gallery(1);
-      }
-    }
-
-    @media (max-width: 659px) and (min-width: 480px) {
-      @include with-layout(2) {
-        @include gallery(1);
-      }
-    }
   }
 
   .product-button {
@@ -38,8 +16,82 @@
     overflow: hidden;
 
     &-wrapper {
+      @include clearfix;
       text-align: center;
     }
   }
 
+  &.products-main {
+    .product-item {
+      @media (min-width: 1070px) {
+        @include gallery(1);
+      }
+
+      @media (max-width: 1069px) and (min-width: 890px) {
+        @include with-layout(4) {
+          @include gallery(1);
+        }
+      }
+
+      @media (max-width: 889px) and (min-width: 660px) {
+        @include with-layout(3) {
+          @include gallery(1);
+        }
+      }
+
+      @media (max-width: 659px) and (min-width: 480px) {
+        @include with-layout(2) {
+          @include gallery(1);
+        }
+      }
+    }
+  }
+
+  &.products-category {
+
+    @media (min-width: 745px) {
+      .products-menu {
+        @include span(1 of 5 at 1 isolate static);
+      }
+
+      .products-content {
+        @include span(full isolate nest);
+        padding-left: span(1 of 5 static wide);
+      }
+    }
+
+    @media (max-width: 745px) {
+      .products-menu {
+        @include span(full);
+      }
+
+      .products-content {
+        @include span(full nest);
+      }
+    }
+
+    &.products-horizontal {
+      .product-item {
+        @include span(full);
+        margin-bottom: 13px;
+      }
+    }
+
+    &.products-cards {
+      .product-item {
+        @media (min-width: 1070px) {
+          @include gallery(1 of 4);
+        }
+
+        @media (max-width: 1069px) and (min-width: 925px) {
+          @include gallery(1 of 3);
+        }
+
+        @media (max-width: 924px) and (min-width: 480px) {
+          @include gallery(1 of 2);
+        }
+      }
+    }
+
+  }
 }

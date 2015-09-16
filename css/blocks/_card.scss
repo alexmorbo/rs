@@ -4,6 +4,7 @@
   z-index: 1;
   padding: 0 0 10px 0;
   text-align: center;
+  @include clearfix;
 
   .card-link {
     position: absolute;
@@ -28,7 +29,7 @@
     background: #4ec67f;
     display: block;
     padding: 9px 15px;
-    z-index: 2;
+    z-index: 1000;
   }
 
   .card-view {
@@ -124,6 +125,127 @@
   &:hover {
     .card-overlay {
       display: block;
+    }
+  }
+
+  &.card-horizontal {
+    $minCardHeight: 108px;
+    padding-bottom: 0;
+
+    .card-vertical {
+      display: table;
+      width: 100%;
+      height: $minCardHeight;
+
+      &-cell {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    .card-name {
+      padding: 10px 0;
+      &-holder {
+        text-align: left;
+      }
+    }
+
+    .card-heading {
+      margin-top: 0;
+    }
+
+    .card-stars {
+      margin-top: 13px;
+    }
+
+    .card-buttons {
+      margin-top: 18px;
+    }
+
+    .card-button {
+      @include margin(null 0);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .card-price {
+      margin: 0;
+    }
+
+    .card-image {
+      display: block;
+      height: auto;
+      margin-top: 8px;
+
+      &-src {
+        max-height: 90px;
+      }
+    }
+
+    .card-overlay {
+      padding-top: 31px;
+      &-holder {
+        position: relative;
+        @include clearfix;
+      }
+    }
+
+    @include with-layout(3) {
+      .card-image {
+        &-holder {
+          @include span(1);
+        }
+      }
+
+      .card-name {
+        &-holder {
+          @include span(2);
+        }
+      }
+    }
+
+    @media (min-width: 601px) {
+      @include with-layout(static) {
+        .card-info {
+          &-holder {
+            @include span(full fluid nest);
+            padding-right: span(170px wide);
+          }
+        }
+
+        .card-buttons {
+          &-holder {
+            @include span(170px);
+            margin-left: -1*span(170px wide);
+          }
+        }
+      }
+
+      @include with-layout(12) {
+        .card-overlay {
+          &-holder {
+            @include span(9 nest);
+          }
+        }
+
+        .card-price {
+          &-holder {
+            @include span(3);
+          }
+        }
+      }
+    }
+
+
+    @media (max-width: 600px) {
+      padding: 9px;
+      .card-price-holder {
+        .card-vertical {
+          height: auto;
+        }
+      }
     }
   }
 }
