@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic&subset=cyrillic,latin'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=cyrillic,latin' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="css/style.min.css"/>
+</head>
+<body>
+
+<div class="b-offcanvas">
+    <div class="offcanvas-content">
+        <div class="offcanvas-menu">
+            <div class="b-menu menu-offcanvas">
+                <ul class="menu-list">
+                    <li class="menu-item item-heading"><a class="menu-link" href="#">Меню</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">О компании</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Сотрудничество</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Новости</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Статьи</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Скидки</a></li>
+                </ul>
+                <ul class="menu-list">
+                    <li class="menu-item item-heading"><a class="menu-link" href="#">Категории</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">КАЛЬЯНЫ</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">OTIVANA</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">ТАБАК</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">АКСЕССУАРЫ</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">УГОЛЬ</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">БЕЗНИКОТиновые смеси</a></li>
+                </ul>
+                <ul class="menu-list">
+                    <li class="menu-item item-heading"><a class="menu-link" href="#">Социальные сети</a></li>
+                    <li class="menu-item">
+                        <ul class="b-social">
+                            <li class="social-item">
+                                <a href="#" class="social-link">
+                                    <i class="social-icon b-icon icon-social-vk"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link">
+                                    <i class="social-icon b-icon icon-social-fb"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link">
+                                    <i class="social-icon b-icon icon-social-ig"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="b-header header-top">
+            <div class="header-wrapper b-wrapper">
+                <div class="header-menu">
+                    <div class="b-menu menu-header">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Сотрудничество
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Статьи
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Скидки
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Доставка
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-login js-login-open">
+                    <a href="#" class="header-login-action">Войти/Регистрация</a>
+                </div>
+                <div class="header-call">
+                    <a href="#" class="header-call-content b-callback callback-yellow">
+                        <span class="callback-text">Заказать звонок</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-login js-login-panel">
+            <div class="login-holder">
+                <div class="login-wrapper b-wrapper">
+                    <div class="login-action-wrapper">
+                        <a class="login-close js-login-open" href="#"><i class="b-icon icon-login-close"></i></a>
+                        <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-input" href="#">Войдите</a> / <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-register" href="#">зарегистрируйтесь</a>
+                    </div>
+                    <div class="login-form">
+                        <form action="#" class="b-form form-login login-form-input js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                                <a class="form-label-info js-login-target-button" data-target=".b-form.login-form-lost" data-target-button="[data-target='.b-form.login-form-input']" href="#">Забыли пароль?</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Войти</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-cell-half form-social">
+                                    <div class="b-social social-login">
+                                        <ul class="social-list">
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-vk"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-fb"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-ok"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-gp"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-tw"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        <span class="form-social-label form-label-info">
+                            Войти через социальную сеть
+                        </span>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" class="b-form form-login login-form-register js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите имя">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Зарегистрироваться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-cell-half form-social">
+                                    <div class="b-social social-login">
+                                        <ul class="social-list">
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-vk"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-fb"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-ok"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-gp"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-tw"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        <span class="form-social-label form-label-info">
+                            Зарегистрироваться через социальную сеть
+                        </span>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" class="b-form form-login login-form-lost js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                                <span class="form-label-info">или</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Напомнить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-header header-with-logo">
+            <div class="header-wrapper b-wrapper">
+                <div class="header-logo">
+                    <a href="#" class="header-logo-link">
+                        <img class="header-logo-src" src="img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form class="header-search-form b-form form-header-search" action="#">
+                        <div class="form-input-holder">
+                            <input class="form-input" type="text" name="search">
+                        </div>
+                        <button class="form-button b-button"><i class="button-icon b-icon icon-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-search-hidden js-search-content">
+                    <form class="header-search-form b-form form-header-search" action="#">
+                        <div class="form-input-holder">
+                            <input class="form-input" type="text" name="search">
+                        </div>
+                        <button class="form-button b-button">Поиск</button>
+                    </form>
+                </div>
+                <div class="header-call">
+                    <a href="#" class="header-call-content b-callback">
+                        <span class="callback-text">Заказать звонок</span>
+                    </a>
+                </div>
+                <div class="header-menu-switcher">
+                    <i class="b-icon icon-menu-switcher js-offcanvas-button"></i>
+                </div>
+                <div class="header-search-switcher">
+                    <button class="switcher-button b-button js-search-open">
+                        <i class="button-icon b-icon icon-search"></i>
+                    </button>
+                </div>
+                <div class="header-phone">
+                    <a class="header-phone-link" href="tel:+79030940006">
+                        <span class="header-phone-text">+7 903 094-00-06</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-menu menu-category">
+            <ul class="menu-list b-wrapper">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        КАЛЬЯНЫ
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        OTIVANA
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        ТАБАК
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        АКСЕССУАРЫ
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        УГОЛЬ
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        БЕЗНИКОТиновые смеси
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="b-wrapper">
+            <ul class="b-breadcrumbs">
+                <li class="crumbs-item">
+                    <-
+                    <a href="#" class="crumbs-link">
+                        Вернуться в магазин
+                    </a>
+                </li>
+            </ul>
+            <section class="b-section b-cart">
+                <h2 class="section-heading">корзина</h2>
+                <div class="section-content">
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="b-card card-cart">
+                                <div class="card-info-holder">
+                                    <div class="card-image-holder">
+                                        <div class="card-image">
+                                            <img class="card-image-src" src="img/tmp/hookah.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-name-holder">
+                                        <div class="card-vertical">
+                                            <div class="card-vertical-cell">
+                                                <div class="card-name">
+                                                    <h3 class="card-heading">REGAL HOOKAL MELECH</h3>
+                                                    <div class="card-stars">
+                                                        <div class="b-stars">
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item item-inactive"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item-price-holder">
+                                        <div class="card-vertical">
+                                            <div class="card-vertical-cell">
+                                                <div class="card-item-price">
+                                                    15 000 руб.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-summary-holder">
+                                    <div class="card-vertical">
+                                        <div class="card-vertical-cell">
+                                            <div class="card-summary">
+                                                <div class="card-summary-counter">
+                                                    <div class="b-counter">
+                                                        <button class="counter-button b-button">-</button>
+                                                        <input class="counter-input" name="quantity">
+                                                        <button class="counter-button b-button">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-summary-price card-price">15 000 руб.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-close">
+                                    <i class="b-icon icon-cart-item-close"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="b-card card-cart">
+                                <div class="card-info-holder">
+                                    <div class="card-image-holder">
+                                        <div class="card-image">
+                                            <img class="card-image-src" src="img/tmp/hookah.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-name-holder">
+                                        <div class="card-vertical">
+                                            <div class="card-vertical-cell">
+                                                <div class="card-name">
+                                                    <h3 class="card-heading">REGAL HOOKAL MELECH</h3>
+                                                    <div class="card-stars">
+                                                        <div class="b-stars">
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item"></i>
+                                                            <i class="star-item item-inactive"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-item-price-holder">
+                                        <div class="card-vertical">
+                                            <div class="card-vertical-cell">
+                                                <div class="card-item-price">
+                                                    15 000 руб.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-summary-holder">
+                                    <div class="card-vertical">
+                                        <div class="card-vertical-cell">
+                                            <div class="card-summary">
+                                                <div class="card-summary-counter">
+                                                    <div class="b-counter">
+                                                        <button class="counter-button b-button">-</button>
+                                                        <input class="counter-input" name="quantity">
+                                                        <button class="counter-button b-button">+</button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-summary-price card-price">15 000 руб.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-close">
+                                    <i class="b-icon icon-cart-item-close"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--<div class="b-summary">
+                        <div class="summary-item">
+                            <div class="summary-name">
+                                Итого
+                            </div>
+                            <div class="summary-content">
+                                15 000 руб.
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+                <h2 class="cart-subheading section-heading">Способ доставки и адрес. <span class="section-heading-highlight">Шаг 2.</span></h2>
+                <h2 class="cart-subheading section-heading">Способ оплаты.</h2>
+                <div class="section-content">
+                    <ul class="cart-paylist">
+                        <li class="paylist-item">
+                            <i class="paylist-icon b-icon icon-pay-cash"></i>
+                            НАЛИЧНЫМИ КУРЬЕРУ
+                        </li>
+                        <li class="paylist-item">
+                            <i class="paylist-icon b-icon icon-pay-card"></i>
+                            НАЛИЧНЫМИ ИЛИ БАНКОВСКОЙ КАРТОЙ в магазине на Клинском пр.,23
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="b-menu menu-footer">
+            <div class="b-wrapper menu-wrapper">
+                <div class="menu-col">
+                    <h4 class="menu-heading">КАЛЬЯНЫ</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">VIP-кальяны</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Кальяны Khalil Mamoon</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">KHALIL MAMOON</a></li>
+                    </ul>
+                    <h4 class="menu-heading">OTIVANA</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Шахты Khalil Mamoon</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Кальяны Regal Hookah USA</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Кальяны Starbuzz USA</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Кальяны Yehia Al Khawanky</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Ортодоксальные кальяны</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4 class="menu-heading">ТАБАК ДЛЯ КАЛЬЯНА</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Social Smoke 100 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Social Smoke 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Tangiers 100 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Tangiers 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Serbetli 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Serbetli Strong 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Argelini 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Fumari 100 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Go Hard 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Darkside 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Doobacco Mini 15 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Krass 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Nakhla 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Adalya 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Al Fakher 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Al Waha 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Al Waha 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Afzal 50 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Khalil Mamoon 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Nirvana 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Salloum 250 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Starbuzz 100 g</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Starbuzz 250 g</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4 class="menu-heading">АКСЕССУАРЫ</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Колбы</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Египетские колбы</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Богемское стекло</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Колбы резные</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Колбы "сирийские"</a></li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Шланги</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Шланги AMY</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Шланги Kaya</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Шланги Royal</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Шланги Ager</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Шланги Otivana</a></li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Чашки</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">США</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Чашки Upgrade Form</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Чашки силиконовые</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link link-subitem">Глиняные</a></li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Комплектующие</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Сопутствующие товары</a></li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4 class="menu-heading">УГОЛЬ ДЛЯ КАЛЬЯНА</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Древесный</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Кокосовый</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Быстроразгорающийся</a></li>
+                    </ul>
+                    <h4 class="menu-heading">Безникотиновые смеси</h4>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#" class="menu-link">Salaam</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Soex</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Shiazo 100 g.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-footer">
+            <div class="b-wrapper footer-wrapper">
+                <div class="footer-col footer-copyright">
+                    Копирайт © rsmoke.ru 2011
+                </div>
+                <div class="footer-col footer-social">
+                    <ul class="b-social">
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="social-icon b-icon icon-social-vk"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="social-icon b-icon icon-social-fb"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-link">
+                                <i class="social-icon b-icon icon-social-ig"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>

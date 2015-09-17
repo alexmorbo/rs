@@ -16,3 +16,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin dashedBackground {
+  @include linear-gradient(to right, #d7d6d0 0px, #e5e4e0 1px, #efefed 2px);
+  background-size: 3px 1px;
+}

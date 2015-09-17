@@ -1,0 +1,52 @@
+.b-cart {
+  .cart-subheading {
+    text-transform: none;
+    text-align: left;
+  }
+
+  .cart-items {
+    @include clearfix;
+  }
+
+  .cart-item {
+    + .cart-item {
+      margin-top: 15px;
+    }
+  }
+
+  .cart-paylist {
+    @include clearfix;
+    float:left;
+
+    .paylist-item {
+      position: relative;
+      padding: 10px 55px;
+      line-height: 1.3;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      + .paylist-item {
+        margin-top: 20px;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: 0;
+          right: 0;
+          height: 1px;
+          @include dashedBackground;
+        }
+      }
+    }
+
+    .paylist-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &.icon-pay-card {
+        top: 5px;
+      }
+    }
+  }
+}

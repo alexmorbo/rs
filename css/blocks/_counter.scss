@@ -1,0 +1,18 @@
+.b-counter {
+  @include clearfix;
+  display: inline-block;
+  height: 32px;
+
+  .counter-input {
+    float: left;
+    height: 32px;
+    border: solid #bfbfbf;
+    border-width: 1px 0 1px;
+    width: 50px;
+  }
+
+  .counter-button {
+    float: left;
+    padding: 0 10px;
+  }
+}

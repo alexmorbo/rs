@@ -6,6 +6,18 @@
   text-align: center;
   @include clearfix;
 
+  $minCardHeight: 108px;
+  .card-vertical {
+    display: table;
+    width: 100%;
+    height: $minCardHeight;
+
+    &-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
   .card-link {
     position: absolute;
     top: 0;
@@ -104,9 +116,9 @@
 
   .card-price {
     margin: 0 0 16px 0;
-
     font-size: 18px;
     color: #000;
+    font-weight: bold;
   }
 
   .card-button {
@@ -129,19 +141,7 @@
   }
 
   &.card-horizontal {
-    $minCardHeight: 108px;
     padding-bottom: 0;
-
-    .card-vertical {
-      display: table;
-      width: 100%;
-      height: $minCardHeight;
-
-      &-cell {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
 
     .card-name {
       padding: 10px 0;
@@ -238,12 +238,168 @@
       }
     }
 
-
     @media (max-width: 600px) {
       padding: 9px;
       .card-price-holder {
         .card-vertical {
           height: auto;
+        }
+      }
+    }
+  }
+
+  &.card-cart {
+
+    padding-right: 75px;
+
+    .card-image {
+      display: block;
+      height: auto;
+      margin-top: 8px;
+
+      &-src {
+        max-height: 90px;
+      }
+    }
+
+    .card-close {
+      position: absolute;
+      right: 30px;
+      top: 38px;
+      z-index: 10;
+    }
+
+    .card-name {
+      text-align: left;
+    }
+
+    .card-stars {
+      margin-top: 13px;
+    }
+
+    .card-summary {
+      &-counter {
+        float: left;
+      }
+
+      &-price {
+        float: right;
+        font-size: 19px;
+        line-height: 34px;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 900px) {
+        &-price,
+        &-counter {
+          float: none;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    @include with-layout (10) {
+      .card-info {
+        &-holder {
+          @include span(7 nest);
+        }
+      }
+
+      .card-summary {
+        &-holder {
+          @include span(3);
+        }
+      }
+    }
+
+    @include with-layout(8) {
+      .card-image {
+        &-holder {
+          @include span(150px);
+          margin-right: -1*span(150px);
+        }
+      }
+
+      .card-name {
+        &-holder {
+          @include span(6);
+          padding-left: span(150px wide);
+        }
+      }
+
+      .card-item-price {
+        &-holder {
+          @include span(2);
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      .card-vertical {
+        height: auto;
+      }
+
+      .card-info {
+        &-holder {
+          @include span(full nest);
+        }
+      }
+
+      .card-summary {
+        text-align: left;
+
+        &-holder {
+          @include span(full);
+          padding-left: span(150px wide);
+          margin-top: 13px;
+        }
+      }
+
+      .card-name {
+        &-holder {
+          width: 100%;
+        }
+      }
+
+      .card-item-price {
+        text-align: left;
+
+        &-holder {
+          @include span(full);
+          padding-left: span(150px wide);
+          margin-top: 13px;
+        }
+      }
+
+      .card-image {
+        &-holder {
+          height: 80px;
+        }
+
+        &-src {
+          height: 100%;
+          max-height: none;
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      padding-right: 0;
+      .card-image {
+        &-holder {
+          @include span(full);
+          height: auto;
+        }
+      }
+
+      .card-name,
+      .card-item-price,
+      .card-summary {
+        text-align: center;
+
+        &-holder {
+          padding-left: gutter();
         }
       }
     }
