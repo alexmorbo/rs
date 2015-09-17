@@ -1,34 +1,50 @@
 .b-summary {
-  width: 200px;
+  display: table;
+  width: 100%;
 
   .summary-item {
-    position: relative;
-    z-index: 1;
-    @include clearfix;
+    display: table-row;
+    height: 40px;
+  }
+
+  .summary-name-holder,
+  .summary-content {
+    display: table-cell;
+    vertical-align: bottom;
+    background: #fff;
+  }
+
+  .summary-name-holder {
+    width: 100%;
+  }
+
+  .summary-content {
+    white-space: nowrap;
   }
 
   .summary-name {
-    display: inline-block;
-  }
+    position: relative;
+    display: inline;
+    background: #fff;
+    z-index: 2;
 
-  .summary-content {
-    float: right;
+    &-wrapper {
+      position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 1px;
-      @include dashedBackground;
-      z-index: -1;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 5px;
+        height: 1px;
+        @include dashedBackground;
+        z-index: 1;
+      }
     }
   }
 
-  .summary-name,
   .summary-content {
-    background: #fff;
-    padding-bottom: 2px;
+    width: 0;
   }
 }

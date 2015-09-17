@@ -9,10 +9,13 @@
     border: solid #bfbfbf;
     border-width: 1px 0 1px;
     width: 50px;
+    border-radius: 0;
+    text-align: center;
   }
 
   .counter-button {
     float: left;
+    height: 32px;
     padding: 0 10px;
   }
 }

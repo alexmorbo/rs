@@ -414,7 +414,7 @@
                                                 <div class="card-summary-counter">
                                                     <div class="b-counter">
                                                         <button class="counter-button b-button">-</button>
-                                                        <input class="counter-input" name="quantity">
+                                                        <input class="counter-input" name="quantity" value="1">
                                                         <button class="counter-button b-button">+</button>
                                                     </div>
                                                 </div>
@@ -471,7 +471,7 @@
                                                 <div class="card-summary-counter">
                                                     <div class="b-counter">
                                                         <button class="counter-button b-button">-</button>
-                                                        <input class="counter-input" name="quantity">
+                                                        <input class="counter-input" name="quantity" value="1">
                                                         <button class="counter-button b-button">+</button>
                                                     </div>
                                                 </div>
@@ -487,19 +487,235 @@
                         </div>
                     </div>
 
-
-                    <!--<div class="b-summary">
-                        <div class="summary-item">
-                            <div class="summary-name">
-                                Итого
-                            </div>
-                            <div class="summary-content">
-                                15 000 руб.
+                    <div class="cart-summary-holder">
+                        <div class="cart-summary b-summary">
+                            <div class="summary-item">
+                                <div class="summary-name-holder">
+                                    <div class="summary-name-wrapper">
+                                        <div class="summary-name">
+                                            Итого
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-content">
+                                    15 000 руб.
+                                </div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
+
+                    <div class="cart-button-holder">
+                        <a href="#" class="cart-button b-button">Оформить заказ</a>
+                    </div>
+
                 </div>
                 <h2 class="cart-subheading section-heading">Способ доставки и адрес. <span class="section-heading-highlight">Шаг 2.</span></h2>
+                <h2 class="cart-subheading cart-subheading-selected section-heading">Способ доставки и адрес. <span class="section-heading-highlight">Шаг 2.</span></h2>
+                <div class="section-content">
+
+                    <div class="cart-delivery b-form">
+                        <label class="cart-delivery-item">
+                            <input type="radio" class="delivery-radio-input form-radio" name="delivery">
+                            <span class="delivery-radio form-radio-label"></span>
+                            <i class="delivery-icon b-icon icon-cart-car"></i>
+                            <span class="delivery-text-holder">
+                                <span class="delivery-text">
+                                    <span class="delivery-text-cell">
+                                        <span class="delivery-heading">
+                                            ДОСТАВКА
+                                        </span>
+                                        <span class="delivery-content">
+                                            Доставка по Санкт-Петербургу до двери
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="cart-delivery-item">
+                            <input type="radio" class="delivery-radio-input form-radio" name="delivery">
+                            <span class="delivery-radio form-radio-label"></span>
+                            <i class="delivery-icon b-icon icon-cart-gift"></i>
+                            <span class="delivery-text-holder">
+                                <span class="delivery-text">
+                                    <span class="delivery-text-cell">
+                                        <span class="delivery-heading">
+                                            САМОВЫВОЗ
+                                        </span>
+                                        <span class="delivery-content">
+                                            Внимание! Самовывоз возможен только при полной предоплате всей стоимости заказа
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="cart-form b-form form-cart">
+                        <div class="b-wrapper">
+                            <div class="cart-form-col">
+                                <div class="form-row">
+                                    <div class="form-heading">АДРЕС ДОСТАВКИ</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Ваше имя">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Контактный номер телефона *">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Населенный пункт">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Улица">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell-third">
+                                        <input class="form-input" placeholder="Дом">
+                                    </div>
+                                    <div class="form-cell-third">
+                                        <input class="form-input" placeholder="Корпус">
+                                    </div>
+                                    <div class="form-cell-third">
+                                        <input class="form-input" placeholder="Квартира">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Комментарий к адресу">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-form-col">
+                                <div class="form-row">
+                                    <div class="form-heading">
+                                        ДАТА И ВРЕМЯ ДОСТАВКИ
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                Укажите требуемую дату
+                                            </span>
+                                            <input class="form-input">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                Подходящий интервал времени
+                                            </span>
+                                            <input class="form-input">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="cart-form b-form form-cart">
+                        <div class="b-wrapper">
+                            <div class="cart-form-col">
+                                <div class="form-row">
+                                    <div class="form-heading">Оформление самовывоза</div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Ваше имя">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <input class="form-input" placeholder="Контактный номер телефона *">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-cell">
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                <input class="form-radio" disabled type="radio" name="address">
+                                                <span class="form-radio-label">Академическая, пр.Науки, д. 10</span>
+                                            </span>
+                                        </label>
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                <input class="form-radio" checked type="radio" name="address">
+                                                <span class="form-radio-label">Академическая, пр.Науки, д. 10</span>
+                                            </span>
+                                        </label>
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                <input class="form-radio" type="radio" name="address">
+                                                <span class="form-radio-label">Академическая, пр.Науки, д. 10</span>
+                                            </span>
+                                        </label>
+                                        <label class="form-label">
+                                            <span class="form-label-text">
+                                                <input class="form-radio" type="radio" name="address">
+                                                <span class="form-radio-label">Академическая, пр.Науки, д. 10</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary-holder">
+                        <div class="cart-summary b-summary">
+                            <div class="summary-item">
+                                <div class="summary-name-holder">
+                                    <div class="summary-name-wrapper">
+                                        <div class="summary-name">
+                                            Cумма
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-content">
+                                    15 000 руб.
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name-holder">
+                                    <div class="summary-name-wrapper">
+                                        <div class="summary-name">
+                                            Доставка
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-content">
+                                    200 руб.
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-name-holder">
+                                    <div class="summary-name-wrapper">
+                                        <div class="summary-name">
+                                            Итого с доставкой
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-content">
+                                    <div class="b-price">15 000 руб.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-button-holder">
+                        <a href="#" class="cart-button b-button">Оформить заказ</a>
+                    </div>
+                </div>
                 <h2 class="cart-subheading section-heading">Способ оплаты.</h2>
                 <div class="section-content">
                     <ul class="cart-paylist">
