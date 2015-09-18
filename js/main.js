@@ -147,4 +147,13 @@ $(document).ready(function(){
 
     })();
 
+    // popup
+    (function() {
+
+        var $link = $('.js-popup.popup-fastview');
+        $link.magnificPopup({
+            type: 'ajax'
+        });
+    })();
+
 });

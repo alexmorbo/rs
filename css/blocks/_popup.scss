@@ -1,0 +1,23 @@
+.b-popup {
+  position: relative;
+  background-color: #fff;
+
+  &.popup-fastview {
+    @include container();
+    padding: 20px;
+    @include margin(6px null);
+  }
+}
+
+.mfp-close {
+  text-indent: 100%;
+  overflow: hidden;
+  &:before {
+    position: absolute;
+    left: -4px;
+    top: 16px;
+    content: '';
+    @extend .b-icon;
+    @extend .b-icon.icon-cart-item-close;
+  }
+}
