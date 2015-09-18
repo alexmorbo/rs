@@ -1,4 +1,8 @@
 .b-price {
   font-size: 18px;
   font-weight: bold;
+
+  &.price-small {
+    font-size: 14px;
+  }
 }

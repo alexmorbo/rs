@@ -18,6 +18,9 @@
     @include transform(translateX(0));
     @include transition(0.3s transform ease);
 
+    padding-top: 1px;  //
+    margin-top: -1px;  // mozilla fix
+
     &:before {
       content: '';
       display: block;

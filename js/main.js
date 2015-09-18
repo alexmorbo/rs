@@ -3,10 +3,11 @@ $(document).ready(function(){
     // products slider
     (function() {
         var $sliderWrapper = $('.b-slider.slider-products'),
-            $slider = $sliderWrapper.find('.slider-list');
+            $slider = $sliderWrapper.find('.slider-list'),
+            $showDots = !$sliderWrapper.hasClass('slider-recommended');
 
         $slider.slick({
-            dots: true,
+            dots: $showDots,
             customPaging: function(slider, i) {
                 return '<div class="slider-dot"></div>';
             },

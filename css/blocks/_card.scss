@@ -7,16 +7,19 @@
   @include clearfix;
 
   $minCardHeight: 108px;
-  .card-vertical {
-    display: table;
-    width: 100%;
-    height: $minCardHeight;
+  @mixin cardVertical {
+    .card-vertical {
+      display: table;
+      width: 100%;
+      height: $minCardHeight;
 
-    &-cell {
-      display: table-cell;
-      vertical-align: middle;
+      &-cell {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
+  @include cardVertical;
 
   .card-link {
     position: absolute;
@@ -402,6 +405,35 @@
         &-holder {
           padding-left: gutter();
         }
+      }
+    }
+  }
+
+  &.card-small {
+    padding-bottom: 0;
+    $minCardHeight: 153px;
+    @include cardVertical;
+
+    @include with-layout (7 no-gutters) {
+      .card-image {
+        height: auto;
+        max-height: $minCardHeight;
+
+        &-holder {
+          @include span(3);
+        }
+      }
+
+      .card-content {
+        text-align: left;
+
+        &-holder {
+          @include span(4);
+        }
+      }
+
+      .card-overlay {
+        padding-top: 53px;
       }
     }
   }

@@ -2,25 +2,22 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $ubuntuCondensed;
   font-weight: bold;
-  color: #40506f;
+  color: #2f343b;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 
 h1 {
   font-size: 45px;
-  line-height: 1.2;
-  margin-bottom: 24px;
 }
 
 h2 {
-  font-size: 28px;
-  margin-bottom: 8px;
+  font-size: 24px;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 9px;
+  font-size: 14px;
 }
 
 h4 {

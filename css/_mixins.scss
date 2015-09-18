@@ -19,5 +19,14 @@
 
 @mixin dashedBackground {
   @include linear-gradient(to right, #d7d6d0 0px, #e5e4e0 1px, #efefed 2px);
+  background-color: unset;
   background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+
+@mixin dashedBackgroundVert {
+  @include linear-gradient(to bottom, #d7d6d0 0px, #e5e4e0 1px, #efefed 2px);
+  background-color: unset;
+  background-size: 1px 3px;
+  background-repeat: repeat-y;
 }

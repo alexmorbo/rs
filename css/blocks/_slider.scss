@@ -183,5 +183,11 @@
         }
       }
     }
+
+    &.slider-recommended {
+      .slider-nav {
+        top: 54px;
+      }
+    }
   }
 }

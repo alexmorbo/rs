@@ -2,6 +2,7 @@
   @include clearfix;
   display: inline-block;
   height: 32px;
+  min-width: 100px;
 
   .counter-input {
     float: left;

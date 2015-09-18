@@ -1,0 +1,9 @@
+.b-recommended {
+  .recommended-content {
+    @include margin(null -1*gutter());
+  }
+
+  .recommended-slider {
+    overflow: visible;
+  }
+}
