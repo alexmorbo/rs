@@ -149,10 +149,34 @@ $(document).ready(function(){
 
     // popup
     (function() {
+        var $link = $('.js-popup');
 
-        var $link = $('.js-popup.popup-fastview');
-        $link.magnificPopup({
-            type: 'ajax'
+        $link.each(function(_, item) {
+            var $item = $(item);
+
+            if ($item.hasClass('popup-fastview')
+                ||
+                $item.hasClass('popup-telephone')
+                ||
+                $item.hasClass('popup-cart')
+            ) {
+                $item.magnificPopup({
+                    type: 'ajax'
+                });
+            }
+            else if ($item.hasClass('popup-callback')) {
+                $item.magnificPopup({
+                    type: 'ajax',
+                    items: {
+                        src: 'popup-callback.html',
+                    },
+                    callbacks: {
+                        ajaxContentAdded: function() {
+                            $(document).trigger('init-masks');
+                        }
+                    }
+                });
+            }
         });
     })();
 
@@ -188,6 +212,29 @@ $(document).ready(function(){
 
             $item.pickmeup(getSettings(settings));
         });
+    })();
+
+    // input mask
+    (function() {
+
+        var initMasks = function () {
+            var $input = $('.js-input-mask');
+
+            $input.each(function() {
+                var $this = $(this);
+
+                if ($this.hasClass('input-mask-phone')) {
+                    $this.val("").mask("+7 (000) 000-00-00", {placeholder: "+7 (   )    -  -  "});
+                }
+            });
+        };
+
+        $(document).on('init-masks', function() {
+            initMasks();
+        });
+
+        initMasks();
+
     })();
 
 });

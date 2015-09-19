@@ -2,10 +2,207 @@
   position: relative;
   background-color: #fff;
 
+  padding-top: 1px;
+  margin: -1px auto 0;
+
+  .popup-head {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .popup-subhead {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f343b;
+    text-transform: uppercase;
+  }
+
+
   &.popup-fastview {
     @include container();
     padding: 20px;
     @include margin(6px null);
+  }
+
+  &.popup-telephone {
+    background-color: unset;
+    background: url($img + 'popup-telephone.png') no-repeat;
+    width: 456px;
+    height: 337px;
+
+    text-align: center;
+
+    .telephone {
+      &-head {
+        margin-top: 149px;
+        margin-bottom: 16px;
+      }
+
+      &-subhead {
+        margin-bottom: 22px;
+      }
+
+      &-button {
+        padding: 0 20px;
+
+        position: static;
+        height: auto;
+        text-indent: 0;
+        width: auto;
+        color: #fff;
+        opacity: 1;
+
+        &:before {
+          left: auto;
+          top: 71px;
+          right: 56px;
+        }
+      }
+    }
+
+    @media (max-width: 460px) {
+      background-image: none;
+      background-color: #fff;
+      width: auto;
+      height: auto;
+
+      .telephone {
+        &-head {
+          margin-top: 50px;
+        }
+
+        &-button {
+          margin-bottom: 50px;
+
+          &:before {
+            top: 10px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &.popup-cart {
+    width: 579px;
+    height: 490px;
+    margin: 0 auto;
+    background-color: unset;
+    background: url($img + 'popup-cart.png') no-repeat;
+    text-align: center;
+    @include padding(null 120px);
+    @include clearfix;
+
+    .cart {
+      &-status {
+        color: #4ec67f;
+      }
+
+      &-head {
+        margin-top: 243px;
+        margin-bottom: 10px;
+      }
+
+      &-subhead {
+        margin-bottom: 11px;
+      }
+
+      &-buttons {
+        margin-top: 24px;
+      }
+
+      &-button {
+        vertical-align: middle;
+        margin-right: 30px;
+        padding: 0 20px;
+
+        position: static;
+        height: auto;
+        text-indent: 0;
+        width: auto;
+        color: #fff;
+        opacity: 1;
+
+        &:before {
+          left: auto;
+          top: 189px;
+          right: 59px;
+        }
+      }
+    }
+
+    @media (max-width: 590px) {
+      background-image: none;
+      background-color: #fff;
+      height: auto;
+      @include padding(null 20px);
+      width: auto;
+
+      .cart {
+        &-head {
+          margin-top: 50px;
+        }
+
+        &-buttons {
+          margin-bottom: 50px;
+        }
+
+        &-button {
+          &:before {
+            right: 10px;
+            top: 10px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 460px) {
+      @include padding(null gutter());
+
+      .cart {
+        &-head {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  &.popup-callback {
+    text-align: center;
+    max-width: 460px;
+    @include margin(null auto);
+    padding: 70px 50px 40px;
+
+    .callback {
+      &-head {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      &-form {
+
+      }
+
+      &-input {
+        font-size: 24px;
+      }
+
+      &-button {
+        margin-top: 10px;
+        padding: 0 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      @include padding(null 20px);
+
+      .callback {
+        &-head {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
 

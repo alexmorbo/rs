@@ -11,6 +11,10 @@
   border: none;
   cursor: pointer;
 
+  &.button-wide {
+    padding: 0 20px;
+  }
+
   &:hover {
     color: #fff;
     background: lighten(#ffbb03, 10%);

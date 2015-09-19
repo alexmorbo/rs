@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Cabinet</title>
+    <title>Popups</title>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic&subset=cyrillic,latin'
           rel='stylesheet' type='text/css'>
@@ -106,13 +106,175 @@
                         </ul>
                     </div>
                 </div>
-                <div class="header-login">
-                    <span class="header-login-action">Марина, привет!</span>
+                <div class="header-login js-login-open">
+                    <a href="#" class="header-login-action">Войти/Регистрация</a>
                 </div>
                 <div class="header-call">
-                    <a href="#" class="header-call-content js-popup popup-callback js-popup popup-callback b-callback callback-yellow">
+                    <a href="#" class="header-call-content js-popup popup-callback b-callback callback-yellow">
                         <span class="callback-text">Заказать звонок</span>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-login js-login-panel">
+            <div class="login-holder">
+                <div class="login-wrapper b-wrapper">
+                    <div class="login-action-wrapper">
+                        <a class="login-close js-login-open" href="#"><i class="b-icon icon-login-close"></i></a>
+                        <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-input" href="#">Войдите</a> / <a class="login-action login-link js-login-target-button" data-target=".b-form.login-form-register" href="#">зарегистрируйтесь</a>
+                    </div>
+                    <div class="login-form">
+                        <form action="#" class="b-form form-login login-form-input js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                                <a class="form-label-info js-login-target-button" data-target=".b-form.login-form-lost" data-target-button="[data-target='.b-form.login-form-input']" href="#">Забыли пароль?</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Войти</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-cell-half form-social">
+                                    <div class="b-social social-login">
+                                        <ul class="social-list">
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-vk"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-fb"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-ok"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-gp"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-tw"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        <span class="form-social-label form-label-info">
+                            Войти через социальную сеть
+                        </span>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" class="b-form form-login login-form-register js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите имя">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                        <div class="form-cell-half">
+                                            <label class="form-label">
+                                                <input class="form-input" type="password" name="pass" placeholder="Введите пароль">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Зарегистрироваться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-cell-half form-social">
+                                    <div class="b-social social-login">
+                                        <ul class="social-list">
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-vk"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-fb"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-ok"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-gp"></i>
+                                                </a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a href="#" class="social-link">
+                                                    <i class="b-icon icon-social-color-tw"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        <span class="form-social-label form-label-info">
+                            Зарегистрироваться через социальную сеть
+                        </span>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" class="b-form form-login login-form-lost js-login-form" data-target-group="login-form">
+                            <div class="form-row">
+                                <div class="form-cell-half">
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                                <span class="form-label-info">или</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <label class="form-label">
+                                                <input class="form-input" type="text" name="phone" placeholder="Введите телефон">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-cell">
+                                            <button class="form-button b-button">Напомнить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,166 +359,44 @@
         </div>
 
         <div class="b-wrapper">
-            <section class="b-cabinet b-section">
-                <h2 class="section-heading">Личный кабинет</h2>
+            <section class="b-section b-products products-main">
+                <h2 class="section-heading">ПРОДУКЦИЯ</h2>
                 <div class="section-content">
-                    <div class="cabinet-buttons">
-                        <a class="cabinet-button cabinet-button-active b-button" href="#"><i class="button-icon b-icon icon-cabinet-man"></i> Личные данные</a>
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-pass"></i> Сменить пароль</a>
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-cart"></i> История покупок</a>
-                    </div>
-                    <div class="cabinet-content">
-                        <div class="cabinet-user">
-                            <div class="cabinet-user-photo-holder">
-                                <img class="cabinet-user-photo" src="img/user-placeholder.png" alt="">
-                            </div>
-                            <div class="cabinet-user-list-holder">
-                                <ul class="cabinet-user-list">
-                                    <li class="cabinet-user-item"><i class="cabinet-user-icon b-icon icon-cabinet-user-icon"></i> Марина</li>
-                                    <li class="cabinet-user-item"><i class="cabinet-user-icon b-icon icon-cabinet-user-phone"></i> +7 963 3031431</li>
-                                    <li class="cabinet-user-item"><i class="cabinet-user-icon b-icon icon-cabinet-user-email"></i> 921385012@mail.ru</li>
-                                    <li class="cabinet-user-item"><i class="cabinet-user-icon b-icon icon-cabinet-user-location"></i> пр. Луначарского, д.14</li>
-                                </ul>
-
-                                <a href="#" class="cabinet-user-button b-button">Редактировать профиль</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cabinet-buttons">
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-man"></i> Личные данные</a>
-                        <a class="cabinet-button cabinet-button-active b-button" href="#"><i class="button-icon b-icon icon-cabinet-pass"></i> Сменить пароль</a>
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-cart"></i> История покупок</a>
-                    </div>
-                    <div class="cabinet-content">
-                        <form class="b-form cabinet-passchange">
-                            <div class="form-row">
-                                <div class="form-cell-half">
-                                    <label class="form-label">
-                                            <span class="form-label-text">
-                                                Старый пароль
-                                            </span>
-                                        <input class="form-input">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell-half">
-                                    <label class="form-label">
-                                            <span class="form-label-text">
-                                                Новый пароль
-                                            </span>
-                                        <input class="form-input">
-                                    </label>
-                                </div>
-                                <div class="form-cell-half">
-                                    <label class="form-label">
-                                            <span class="form-label-text">
-                                                Повторить пароль
-                                            </span>
-                                        <input class="form-input">
-                                    </label>
-                                </div>
-                                <div class="form-cell">
-                                    <div class="form-label-info">
-                                        Пароль должен содержать не менее 4 символов
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">
-                                    <button class="cabinet-button cabinet-button-active form-button b-button">Сменить пароль</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="cabinet-buttons">
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-man"></i> Личные данные</a>
-                        <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-pass"></i> Сменить пароль</a>
-                        <a class="cabinet-button cabinet-button-active b-button" href="#"><i class="button-icon b-icon icon-cabinet-cart"></i> История покупок</a>
-                    </div>
-                    <div class="cabinet-content">
-
-                        <div class="cabinet-filter">
-                            <div class="cabinet-filter-status">
-                                <a class="status-item item-active" href="#">
-                                    Все заказы
-                                </a>
-                                <a class="status-item" href="#">
-                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Текущие</span>
-                                </a>
-                                <a class="status-item" href="#">
-                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-ok"></i> Завершенные</span>
-                                </a>
-                                <a class="status-item" href="#">
-                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-not"></i> Невыкупленные</span>
-                                </a>
-                            </div>
-                            <div class="cabinet-filter-date b-form">
-                                <div class="form-row">
-                                    <div class="form-cell cabinet-date-holder js-datepicker-group">
-                                        <div class="cabinet-date-input">
-                                            <div class="form-input-holder">
-                                                <input class="form-input js-datepicker js-datepicker-start" type="text">
-                                                <i class="form-input-icon b-icon icon-cabinet-input-date"></i>
-                                            </div>
-                                        </div>
-                                        <div class="cabinet-date-dash">&mdash;</div>
-                                        <div class="cabinet-date-input">
-                                            <div class="form-input-holder">
-                                                <input class="form-input js-datepicker js-datepicker-end" type="text">
-                                                <i class="form-input-icon b-icon icon-cabinet-input-date"></i>
-                                            </div>
-                                        </div>
-                                        <div class="form-cell">
-                                            <div class="form-label-info">
-                                                Укажите диапазон для фильтрации заказов по дате
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="b-table table-responsive">
-                            <div class="table-head">
-                                <div class="table-cell">Номер заказа</div>
-                                <div class="table-cell">Дата заказа</div>
-                                <div class="table-cell">Адрес доставки/самовывоза</div>
-                                <div class="table-cell">Сумма</div>
-                                <div class="table-cell">Статус</div>
-                            </div>
-                            <div class="table-row">
-                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
-                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
-                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
-                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
-                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-wait"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Обрабатывается</span></div>
-                            </div>
-                            <div class="table-row">
-                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
-                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
-                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
-                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
-                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-ok"><i class="cabinet-status-icon b-icon icon-cabinet-status-ok"></i> Выдан</span></div>
-                            </div>
-                            <div class="table-row">
-                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
-                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
-                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
-                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
-                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-not"><i class="cabinet-status-icon b-icon icon-cabinet-status-not"></i> Выдача</span></div>
-                            </div>
-                            <div class="table-row">
-                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
-                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
-                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
-                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
-                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-wait"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Обрабатывается</span></div>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="b-button button-wide js-popup popup-fastview" href="product-ajax.html">Быстрый просмотр</a>
+                    <a class="b-button button-wide js-popup popup-cart" href="popup-cart.html">Заказ принят</a>
+                    <button class="b-button button-wide js-popup popup-callback">Введите номер телефона</button>
+                    <a class="b-button button-wide js-popup popup-telephone" href="popup-telephone.html">Спасибо, вам перезвонят</a>
                 </div>
             </section>
+        </div>
+
+        <div class="b-slider slider-reviews">
+            <div class="slider-list b-wrapper">
+                <div class="slider-item">
+                    <div class="slider-photo">
+                        <img class="slider-photo-src" src="img/tmp/review-photo.jpg" alt="">
+                    </div>
+                    <div class="slider-content">
+                        <p>Дорогие родители! Приглашаем Ваших деток с 1.5 лет, в домашний детский сад! Для вашего ребенка 4-х разовое вкусное питание которое готовит квалифицированный повар, занятия, уход, режим ежедневно! Внимательный педагог станет хорошим другом для вашего малыша! Мы предлагаем индивидуальный подход к вашему ребенку. Работа по договору. Сад-ясли находится в КАЛИНИНСКОМ РАЙОНЕ на ул. ФАДЕЕВА. Звоните,будем рады ответить на все ваши вопросы.Мы Работаем для Вас с 07.30 до 19.00</p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-photo">
+                        <img class="slider-photo-src" src="img/tmp/review-photo.jpg" alt="">
+                    </div>
+                    <div class="slider-content">
+                        <p>Дорогие родители! Приглашаем Ваших деток с 1.5 лет, в домашний детский сад! Для вашего ребенка 4-х разовое вкусное питание которое готовит квалифицированный повар, занятия, уход, режим ежедневно! Внимательный педагог станет хорошим другом для вашего малыша! Мы предлагаем индивидуальный подход к вашему ребенку. Работа по договору. Сад-ясли находится в КАЛИНИНСКОМ РАЙОНЕ на ул. ФАДЕЕВА. Звоните,будем рады ответить на все ваши вопросы.Мы Работаем для Вас с 07.30 до 19.00</p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-photo">
+                        <img class="slider-photo-src" src="img/tmp/review-photo.jpg" alt="">
+                    </div>
+                    <div class="slider-content">
+                        <p>Дорогие родители! Приглашаем Ваших деток с 1.5 лет, в домашний детский сад! Для вашего ребенка 4-х разовое вкусное питание которое готовит квалифицированный повар, занятия, уход, режим ежедневно! Внимательный педагог станет хорошим другом для вашего малыша! Мы предлагаем индивидуальный подход к вашему ребенку. Работа по договору. Сад-ясли находится в КАЛИНИНСКОМ РАЙОНЕ на ул. ФАДЕЕВА. Звоните,будем рады ответить на все ваши вопросы.Мы Работаем для Вас с 07.30 до 19.00</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="b-menu menu-footer">
@@ -493,7 +533,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.pickmeup.min.js"></script>
 <script src="js/jquery.mask.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

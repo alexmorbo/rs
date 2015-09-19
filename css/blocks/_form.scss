@@ -1,4 +1,5 @@
 .b-form {
+  @include clearfix;
 
   .form-input {
     width: 100%;

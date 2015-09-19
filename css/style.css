@@ -1708,6 +1708,8 @@ a {
   background: #ffbb03;
   border: none;
   cursor: pointer; }
+  .b-button.button-wide {
+    padding: 0 20px; }
   .b-button:hover {
     color: #fff;
     background: #ffc936; }
@@ -2168,6 +2170,11 @@ a {
   .b-callback.callback-yellow {
     background-color: #ffbb03; }
 
+.b-form::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 .b-form .form-input {
   width: 100%;
   height: 35px;
@@ -2588,7 +2595,8 @@ a {
 .b-counter {
   display: inline-block;
   height: 32px;
-  min-width: 100px; }
+  min-width: 100px;
+  white-space: nowrap; }
   .b-counter::after {
     clear: both;
     content: "";
@@ -2604,7 +2612,8 @@ a {
   .b-counter .counter-button {
     float: left;
     height: 32px;
-    padding: 0 10px; }
+    padding: 0 10px;
+    width: 25px; }
 
 .b-price {
   font-size: 18px;
@@ -2784,7 +2793,18 @@ a {
 
 .b-popup {
   position: relative;
-  background-color: #fff; }
+  background-color: #fff;
+  padding-top: 1px;
+  margin: -1px auto 0; }
+  .b-popup .popup-head {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .b-popup .popup-subhead {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f343b;
+    text-transform: uppercase; }
   .b-popup.popup-fastview {
     max-width: 1086px;
     margin-left: auto;
@@ -2796,6 +2816,119 @@ a {
       content: " ";
       display: block;
       clear: both; }
+  .b-popup.popup-telephone {
+    background-color: unset;
+    background: url("../img/popup-telephone.png") no-repeat;
+    width: 456px;
+    height: 337px;
+    text-align: center; }
+    .b-popup.popup-telephone .telephone-head {
+      margin-top: 149px;
+      margin-bottom: 16px; }
+    .b-popup.popup-telephone .telephone-subhead {
+      margin-bottom: 22px; }
+    .b-popup.popup-telephone .telephone-button {
+      padding: 0 20px;
+      position: static;
+      height: auto;
+      text-indent: 0;
+      width: auto;
+      color: #fff;
+      opacity: 1; }
+      .b-popup.popup-telephone .telephone-button:before {
+        left: auto;
+        top: 71px;
+        right: 56px; }
+    @media (max-width: 460px) {
+      .b-popup.popup-telephone {
+        background-image: none;
+        background-color: #fff;
+        width: auto;
+        height: auto; }
+        .b-popup.popup-telephone .telephone-head {
+          margin-top: 50px; }
+        .b-popup.popup-telephone .telephone-button {
+          margin-bottom: 50px; }
+          .b-popup.popup-telephone .telephone-button:before {
+            top: 10px;
+            right: 10px; } }
+  .b-popup.popup-cart {
+    width: 579px;
+    height: 490px;
+    margin: 0 auto;
+    background-color: unset;
+    background: url("../img/popup-cart.png") no-repeat;
+    text-align: center;
+    padding-right: 120px;
+    padding-left: 120px; }
+    .b-popup.popup-cart::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .b-popup.popup-cart .cart-status {
+      color: #4ec67f; }
+    .b-popup.popup-cart .cart-head {
+      margin-top: 243px;
+      margin-bottom: 10px; }
+    .b-popup.popup-cart .cart-subhead {
+      margin-bottom: 11px; }
+    .b-popup.popup-cart .cart-buttons {
+      margin-top: 24px; }
+    .b-popup.popup-cart .cart-button {
+      vertical-align: middle;
+      margin-right: 30px;
+      padding: 0 20px;
+      position: static;
+      height: auto;
+      text-indent: 0;
+      width: auto;
+      color: #fff;
+      opacity: 1; }
+      .b-popup.popup-cart .cart-button:before {
+        left: auto;
+        top: 189px;
+        right: 59px; }
+    @media (max-width: 590px) {
+      .b-popup.popup-cart {
+        background-image: none;
+        background-color: #fff;
+        height: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: auto; }
+        .b-popup.popup-cart .cart-head {
+          margin-top: 50px; }
+        .b-popup.popup-cart .cart-buttons {
+          margin-bottom: 50px; }
+        .b-popup.popup-cart .cart-button:before {
+          right: 10px;
+          top: 10px; } }
+    @media (max-width: 460px) {
+      .b-popup.popup-cart {
+        padding-right: 9px;
+        padding-left: 9px; }
+        .b-popup.popup-cart .cart-head {
+          font-size: 25px; } }
+  .b-popup.popup-callback {
+    text-align: center;
+    max-width: 460px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 70px 50px 40px; }
+    .b-popup.popup-callback .callback-head {
+      font-size: 20px;
+      margin-bottom: 25px; }
+    .b-popup.popup-callback .callback-input {
+      font-size: 24px; }
+    .b-popup.popup-callback .callback-button {
+      margin-top: 10px;
+      padding: 0 25px; }
+    @media (max-width: 480px) {
+      .b-popup.popup-callback {
+        padding-right: 20px;
+        padding-left: 20px; }
+        .b-popup.popup-callback .callback-head {
+          font-size: 18px; } }
 
 .mfp-close {
   text-indent: 100%;
