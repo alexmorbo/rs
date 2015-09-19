@@ -99,4 +99,84 @@
   .cabinet-passchange {
     max-width: 500px;
   }
+
+  .cabinet-status {
+    position: relative;
+    line-height: 24px;
+
+    &-icon {
+      position: relative;
+      top: 4px;
+      left: 0;
+    }
+
+    &.status-ok {
+      color: #6ed400;
+    }
+
+    &.status-wait {
+      color: #ffbb03;
+    }
+
+    &.status-not {
+      color: #ff0006;
+    }
+  }
+
+  .cabinet-filter {
+    @include clearfix;
+    @include margin(null -1*gutter() 13px);
+
+    &-status {
+      .status-item {
+        display: inline-block;
+        padding: 9px 18px;
+
+        &.item-active {
+          border: 1px solid #ffbb03;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-status {
+      @include span(full);
+      padding-right: 410px;
+    }
+
+    &-date {
+      float: right;
+      width: 400px;
+      margin-left: -400px;
+      padding-right: gutter();
+    }
+
+    @media (max-width: 660px) {
+      &-status {
+        padding-right: gutter();
+      }
+
+      &-date {
+        @include span(full);
+        margin-left: 0;
+      }
+    }
+  }
+
+  .cabinet-date {
+    &-holder {
+      @include span(full nest);
+      @include padding(null 0);
+    }
+
+    &-input {
+      @include span(6 of 13);
+    }
+
+    &-dash {
+      @include span(1 of 13);
+      text-align: center;
+      line-height: 35px;
+    }
+  }
 }

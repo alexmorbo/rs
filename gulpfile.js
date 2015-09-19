@@ -7,6 +7,9 @@ gulp.task('sass', function() {
     gulp.src('./css/style.scss')
         .pipe($.sass({
             errLogToConsole: true
+        }).on('error', function(e) {
+            console.log(e.file);
+            console.log(e.message);
         }))
         .pipe(gulp.dest('./css/'))
         .pipe($.minifyCss())

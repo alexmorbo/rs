@@ -9,6 +9,16 @@
     padding-left: 14px;
     border-radius: 0;
     box-shadow: none;
+
+    &-holder {
+      position: relative;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 10px;
+      top: 11px;
+    }
   }
 
   .form-radio {

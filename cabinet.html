@@ -274,6 +274,87 @@
                         <a class="cabinet-button b-button" href="#"><i class="button-icon b-icon icon-cabinet-pass"></i> Сменить пароль</a>
                         <a class="cabinet-button cabinet-button-active b-button" href="#"><i class="button-icon b-icon icon-cabinet-cart"></i> История покупок</a>
                     </div>
+                    <div class="cabinet-content">
+
+                        <div class="cabinet-filter">
+                            <div class="cabinet-filter-status">
+                                <a class="status-item item-active" href="#">
+                                    Все заказы
+                                </a>
+                                <a class="status-item" href="#">
+                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Текущие</span>
+                                </a>
+                                <a class="status-item" href="#">
+                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-ok"></i> Завершенные</span>
+                                </a>
+                                <a class="status-item" href="#">
+                                    <span class="cabinet-status"><i class="cabinet-status-icon b-icon icon-cabinet-status-not"></i> Невыкупленные</span>
+                                </a>
+                            </div>
+                            <div class="cabinet-filter-date b-form">
+                                <div class="form-row">
+                                    <div class="form-cell cabinet-date-holder">
+                                        <div class="cabinet-date-input">
+                                            <div class="form-input-holder">
+                                                <input class="form-input input-date" type="text">
+                                                <i class="form-input-icon b-icon icon-cabinet-input-date"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-date-dash">&mdash;</div>
+                                        <div class="cabinet-date-input">
+                                            <div class="form-input-holder">
+                                                <input class="form-input" type="text">
+                                                <i class="form-input-icon b-icon icon-cabinet-input-date"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-cell">
+                                            <div class="form-label-info">
+                                                Укажите диапазон для фильтрации заказов по дате
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="b-table table-responsive">
+                            <div class="table-head">
+                                <div class="table-cell">Номер заказа</div>
+                                <div class="table-cell">Дата заказа</div>
+                                <div class="table-cell">Адрес доставки/самовывоза</div>
+                                <div class="table-cell">Сумма</div>
+                                <div class="table-cell">Статус</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
+                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
+                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
+                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
+                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-wait"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Обрабатывается</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
+                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
+                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
+                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
+                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-ok"><i class="cabinet-status-icon b-icon icon-cabinet-status-ok"></i> Выдан</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
+                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
+                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
+                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
+                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-not"><i class="cabinet-status-icon b-icon icon-cabinet-status-not"></i> Выдача</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell" data-cell-caption="Номер заказа"><span class="cabinet-status status-ok b-price">25122</span></div>
+                                <div class="table-cell" data-cell-caption="Дата заказа">2 октября 2016</div>
+                                <div class="table-cell" data-cell-caption="Адрес доставки/самовывоза">Самовывоз</div>
+                                <div class="table-cell" data-cell-caption="Сумма"><span class="b-price">3251.00 р.</span></div>
+                                <div class="table-cell" data-cell-caption="Статус"><span class="cabinet-status status-wait"><i class="cabinet-status-icon b-icon icon-cabinet-status-wait"></i> Обрабатывается</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
