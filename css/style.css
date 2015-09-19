@@ -507,7 +507,7 @@ img.mfp-img {
       color: #666; }
     .pickmeup .pmu-instance .pmu-disabled,
     .pickmeup .pmu-instance .pmu-disabled:hover {
-      color: #333;
+      color: #ccc;
       cursor: default; }
     .pickmeup .pmu-instance .pmu-selected {
       background: #ffbb03;

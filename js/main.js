@@ -158,16 +158,35 @@ $(document).ready(function(){
 
     //datepicker
     (function() {
-        var $items = $('.js-datepicker');
+        var $items = $('.js-datepicker'),
+            defaultSettings = {
+                format: 'Y-m-d',
+                locale: {
+                    days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+                    daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                    daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+                    months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                    monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+                }
+            };
 
-        $items.pickmeup({
-            locale: {
-                days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-                daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-                daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-                months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-                monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
+        var getSettings = function (settings) {
+            return $.extend(defaultSettings, settings);
+        };
+
+        $items.each(function(_, item) {
+            var $item = $(item),
+                settings = {};
+
+            if ($item.hasClass('js-datepicker-start')) {
+                var $end = $item.parents('.js-datepicker-group').find('.js-datepicker-end');
+                settings["change"] = function (date) {
+                    $end.pickmeup('destroy');
+                    $end.pickmeup(getSettings({'min': date}));
+                };
             }
+
+            $item.pickmeup(getSettings(settings));
         });
     })();
 
