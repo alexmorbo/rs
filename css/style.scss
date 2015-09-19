@@ -5,6 +5,28 @@
 @import "../bower_components/slick-carousel/slick/slick";
 @import "../bower_components/magnific-popup/src/css/main";
 
+
+$border-radius						: 0;
+$background							: #fff;
+$color								: #000;
+$background-hover					: lighten(#ffbb03, 10%);;
+$color-hover						: #fff;
+$nav-color							: $color !default;
+$nav-color-hover					: $color-hover !default;
+$not-in-month						: #666 !default;
+$not-in-month-hover					: #999 !default;
+$disabled							: #333 !default;
+$selected							: #fff;
+$selected-background				: #ffbb03;
+$not-in-month-selected-background	: #17384d !default;
+$day-of-week						: $not-in-month-hover !default;
+$today-background					: #fff;
+$today-color						: #ffbb03;
+.pickmeup {
+  border: 1px solid #ffbb03;
+}
+@import "../bower_components/pickmeup/css/pickmeup";
+
 @import "vendor/reset";
 @import "vendor/box-sizing";
 

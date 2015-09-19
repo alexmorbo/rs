@@ -18,6 +18,7 @@
     "bourbon": "~4.2.4",
     "jquery": "~2.1.4",
     "magnific-popup": "~1.0.0",
+    "pickmeup": "~2.8.0",
     "slick-carousel": "~1.5.8",
     "susy": "~2.2.6"
   }
