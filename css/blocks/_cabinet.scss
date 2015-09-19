@@ -1,0 +1,102 @@
+.b-cabinet {
+  .cabinet-buttons {
+    margin-bottom: 15px;
+  }
+
+  .cabinet-button {
+    line-height: 35px;
+    background: #ebebeb;
+    color: #2f343b;
+    width: 180px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    &:hover {
+      background: lighten(#ebebeb, 1%);
+    }
+
+    @media (max-width: 470px) {
+      width: 100%;
+    }
+
+    &-active {
+      background: #ffbb03;
+      color: #fff;
+
+      &:hover {
+        background: lighten(#ffbb03, 10%);
+      }
+
+      .icon-cabinet-man {
+        @extend .b-icon.icon-cabinet-man-active;
+      }
+
+      .icon-cabinet-pass {
+        @extend .b-icon.icon-cabinet-pass-active;
+      }
+
+      .icon-cabinet-cart {
+        @extend .b-icon.icon-cabinet-cart-active;
+      }
+    }
+  }
+
+  .cabinet-content {
+    @include clearfix;
+
+    margin-bottom: 50px;
+  }
+
+  .cabinet-user {
+    @include clearfix;
+
+    &-photo {
+      &-holder {
+        @include span(130px no-gutters);
+        @include isolate();
+      }
+    }
+
+    &-list {
+      &-holder {
+        @include span(full);
+        padding-left: 170px;
+      }
+    }
+
+    &-item {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 26px;
+    }
+
+    &-icon {
+      position: absolute;
+      left: 0;
+      top: -1px;
+    }
+
+    &-button {
+      padding: 0 20px;
+      line-height: 35px;
+    }
+
+    @media (max-width: 470px) {
+      &-photo-holder {
+        display: none;
+      }
+
+      &-list-holder {
+        @include padding(null 0);
+      }
+
+      &-button {
+        width: 100%;
+      }
+    }
+  }
+
+  .cabinet-passchange {
+    max-width: 500px;
+  }
+}

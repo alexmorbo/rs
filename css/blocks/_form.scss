@@ -1,13 +1,14 @@
 .b-form {
 
   .form-input {
+    width: 100%;
     height: 35px;
     line-height: 35px;
     font-weight: 100;
     border: 1px solid #bfbfbf;
     padding-left: 14px;
     border-radius: 0;
-    box-shadow: none
+    box-shadow: none;
   }
 
   .form-radio {
@@ -42,6 +43,60 @@
     }
   }
 
+  .form-button {
+    padding: 0 15px;
+  }
+
+  .form-label {
+    display: block;
+    width: 100%;
+
+    &-text {
+      display: block;
+      margin-bottom: 13px;
+      cursor: pointer;
+    }
+
+    &-info {
+      display: inline-block;
+      margin-top: 10px;
+      color: #58585a;
+    }
+  }
+
+  .form-row {
+    display: block;
+    @include margin(null -1*gutter() 15px);
+    @include clearfix;
+  }
+
+  .form-cell {
+    @include span(full);
+
+    &-half {
+      @include span(1 of 2);
+    }
+
+    &-third {
+      @include span(1 of 3);
+    }
+  }
+
+  @media (max-width: 800px) {
+    .form-row {
+      margin-bottom: 0;
+    }
+
+    .form-cell {
+      margin-bottom: 15px;
+
+      &-half {
+        @include span(full);
+        margin-bottom: 15px;
+      }
+    }
+  }
+
   &.form-header-search {
     .form-input {
       width: 100%;
@@ -58,6 +113,7 @@
       float: right;
       width: 35px;
       height: 35px;
+      padding: 0;
 
       .button-icon {
         margin-right: 0;
@@ -83,27 +139,9 @@
       @include padding(null 35px);
     }
 
-    .form-row {
-      display: block;
-      @include margin(null -1*gutter() 15px);
-      @include clearfix;
-    }
-
     .form-label {
-      width: 100%;
-
       &-info {
-        display: inline-block;
-        margin-top: 10px;
         color: #58585a;
-      }
-    }
-
-    .form-cell {
-      @include span(full);
-
-      &-half {
-        @include span(1 of 2);
       }
     }
 
@@ -123,56 +161,19 @@
       .form-social {
         text-align: center;
       }
-
-      .form-row {
-        margin-bottom: 0;
-      }
-
-      .form-cell {
-        margin-bottom: 15px;
-
-        &-half {
-          @include span(full);
-          margin-bottom: 15px;
-        }
-      }
     }
   }
 
   &.form-cart {
 
     .form-row {
-      display: block;
       margin-bottom: 28px;
-      @include clearfix;
     }
 
     .form-heading {
       @include span(full);
       text-transform: uppercase;
       font-weight: bold;
-    }
-
-    .form-label {
-      display: block;
-
-      &-text {
-        display: block;
-        margin-bottom: 13px;
-        cursor: pointer;
-      }
-    }
-
-    .form-cell {
-      @include span(full);
-
-      &-half {
-        @include span(1 of 2);
-      }
-
-      &-third {
-        @include span(1 of 3);
-      }
     }
 
     .form-input {
