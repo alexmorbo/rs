@@ -21,6 +21,11 @@
     }
   }
 
+  .products-menu {
+    position: relative;
+    z-index: 1;
+  }
+
   @media (min-width: 745px) {
     .products-menu {
       @include span(1 of 5 at 1 isolate static);

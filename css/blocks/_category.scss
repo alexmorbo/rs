@@ -78,4 +78,103 @@
       }
     }
   }
+
+  &.category-otivana {
+    .category-content {
+      @include margin(null -1*gutter());
+    }
+
+    .category-item {
+      @include span(1 of 3);
+      margin-bottom: 30px;
+
+      &.item-hookah {
+        .category-item {
+          &-image {
+            padding-top: 13px;
+          }
+
+          &-heading {
+            padding-top: 16px;
+          }
+        }
+      }
+
+      &.item-accessories {
+        .category-item {
+          &-image {
+            padding-top: 18px;
+          }
+
+          &-heading {
+            padding-top: 16px;
+          }
+        }
+      }
+
+      &.item-home {
+        .category-item {
+          &-content {
+            background: #8e8d88;
+          }
+
+          &-image {
+            padding-top: 21px;
+          }
+
+          &-heading {
+            padding-top: 23px;
+          }
+        }
+      }
+
+      &-content {
+        display: block;
+        position: relative;
+        z-index: 1;
+        min-height: 119px;
+        background: #009ecb;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      &-image {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 25px;
+
+        .b-icon {
+          vertical-align: middle;
+        }
+      }
+
+      &-heading {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      @media (max-width: 880px) {
+        @include span(full);
+        margin-bottom: gutter();
+      }
+
+      @media (max-width: 400px) {
+        &-image {
+          display: none;
+        }
+
+        &.item-hookah,
+        &.item-accessories {
+          .category-item {
+            &-heading {
+              padding-top: 44px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

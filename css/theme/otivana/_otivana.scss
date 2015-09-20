@@ -1,0 +1,62 @@
+.theme-otivana {
+  .b-header {
+
+    &.header-with-logo {
+      .header-wrapper {
+        @include padding(25px null null);
+      }
+
+      .header-logo-src {
+        margin-top: -23px;
+      }
+    }
+
+    .header-login-action {
+      &:before {
+        @extend .b-icon.icon-otivana-man;
+      }
+    }
+  }
+
+  .b-callback {
+    &:before {
+      @extend .b-icon.icon-otivana-phone-call;
+    }
+
+    &.callback-yellow {
+      background: #fff; // ;)
+    }
+  }
+
+  .b-button {
+    background: #0e76bc;
+
+    &.button-load {
+      background: #fff;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    &:hover {
+      background: lighten(#0e76bc, 10%);
+    }
+  }
+
+  .b-slider {
+    &.slider-reviews {
+      background: #009ecb;
+    }
+  }
+
+  .b-icon {
+    &.icon-cart-like {
+      @extend .b-icon.icon-otivana-cart-like;
+    }
+
+    &.icon-cart-basket {
+      @extend .b-icon.icon-otivana-cart-basket;
+    }
+  }
+}

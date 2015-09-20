@@ -126,6 +126,8 @@
       width: 35px;
       height: 35px;
       padding: 0;
+      position: relative;
+      z-index: 1;
 
       .button-icon {
         margin-right: 0;
