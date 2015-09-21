@@ -38,6 +38,10 @@
       .icon-cabinet-cart {
         @extend .b-icon.icon-cabinet-cart-active;
       }
+
+      .icon-cabinet-like {
+        @extend .b-icon.icon-cabinet-like-active;
+      }
     }
   }
 
