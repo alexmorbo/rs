@@ -1,0 +1,88 @@
+.b-share {
+  position: relative;
+  z-index: 100;
+
+  .share-action {
+    cursor: pointer;
+  }
+
+  .share-list {
+    position: absolute;
+    top: 24px;
+    right: 9px;
+    display: none;
+    padding: 24px 10px 10px 7px;
+    border: 1px solid #ebebeb;
+    text-align: left;
+    background: #fff;
+    min-width: 155px;
+  }
+
+  .share-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .share-item {
+    position: relative;
+    font-size: 12px;
+    vertical-align: middle;
+
+    + .share-item {
+      margin-top: 8px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 30px;
+        right: 0;
+        height: 1px;
+        @include dashedBackground;
+      }
+    }
+  }
+
+  .share-icon {
+    vertical-align: middle;
+    margin-right: 3px;
+  }
+
+  .share-link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      .share-icon {
+        &.icon-share-fb-inactive {
+          @extend .b-icon.icon-share-fb;
+        }
+
+        &.icon-share-vk-inactive {
+          @extend .b-icon.icon-share-vk;
+        }
+
+        &.icon-share-tw-inactive {
+          @extend .b-icon.icon-share-tw;
+        }
+
+        &.icon-share-ok-inactive {
+          @extend .b-icon.icon-share-ok;
+        }
+
+        &.icon-share-gp-inactive {
+          @extend .b-icon.icon-share-gp;
+        }
+      }
+    }
+  }
+
+  &.share-active {
+
+    .share-list {
+      display: block;
+    }
+  }
+}

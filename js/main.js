@@ -237,4 +237,17 @@ $(document).ready(function(){
 
     })();
 
+    // share
+    (function() {
+
+        $(document).on('click', '.b-share .share-action, .b-share .share-close', function () {
+
+            var $this = $(this),
+                $thisShare = $this.closest('.b-share'),
+                activeClass = 'share-active';
+
+            $thisShare.toggleClass(activeClass);
+        });
+
+    })();
 });
